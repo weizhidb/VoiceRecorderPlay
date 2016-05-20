@@ -1,0 +1,68 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEDED"
+    tools:context=".MainActivity">
+
+
+    <com.voicebeta.view.BubbleLinearLayout
+
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        app:arrowWidth="8dp"
+        app:angle="4dp"
+        app:arrowHeight="10dp"
+        app:arrowPosition="10dp"
+        app:arrowLocation="left"
+        app:bubbleColor="#7EC0EE"
+        android:id="@+id/id_play"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/voicebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </com.voicebeta.view.BubbleLinearLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/id_record_btn_press"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/recordbtn_selector">
+        <ImageButton
+            android:id="@+id/id_id_record_btn_press_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:background="#ffffff"
+            android:src="@mipmap/voicebtn"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_recording_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/id_record_btn_press"
+        android:layout_margin="50dp"
+        android:visibility="gone"
+        >
+
+        <include layout="@layout/recording"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voice_record_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_above="@+id/voice_record_btn"
+    android:background="@drawable/circle"
+    android:clickable="true"
+    >
+
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerInside"
+        android:src="@mipmap/voice_ugc_icon_recording" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/voice_ugc_icon_recordingring"
+        android:gravity="bottom" >
+
+        <ImageView
+            android:id="@+id/voice_recording_volume"
+            android:layout_width="50dip"
+            android:layout_height="0dip"
+            android:background="@drawable/voice_ugc_icon_recordingvolume" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/voice_ugc_icon_recordingring" />
+
+    <RelativeLayout
+        android:id="@+id/voice_recordinglight_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/voice_recordinglight_1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/voice_ugc_icon_recordinglight"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/voice_recordinglight_2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/voice_ugc_icon_recordinglight"
+            android:visibility="gone"
+             />
+
+        <ImageView
+            android:id="@+id/voice_recordinglight_3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/voice_ugc_icon_recordinglight"
+            android:visibility="gone"
+             />
+    </RelativeLayout>
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="20dip"
+    android:layout_marginLeft="20dip"
+    android:layout_marginRight="20dip" >
+
+    <TextView
+        android:id="@+id/voice_record_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="0&apos;&apos;"
+        android:textColor="#999999" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="60″"
+        android:textColor="#999999" />
+
+    <ProgressBar
+        android:id="@+id/voice_record_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="6dip"
+        android:layout_below="@+id/voice_record_time"
+        android:max="60"
+        android:progress="0"
+        android:progressDrawable="@drawable/globle_player_progress_bar_bg" />
+</RelativeLayout>
+</RelativeLayout>
